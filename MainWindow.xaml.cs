@@ -74,6 +74,7 @@ namespace DPaste
                     }
                     else throw new Exception("Unknown Response: " + res2);
                 }
+                Input.Text = "";
             }
             catch (Exception ex) {
                 PGD.Content = "Error: " + ex.ToString();

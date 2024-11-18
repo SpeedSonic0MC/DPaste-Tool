@@ -36,8 +36,7 @@
                         </Label.Triggers>
                     </Label>
                 </Grid>
-                <Grid x:Name="DPMainX">
-                    <!-- Visibility="Collapsed" -->
+                <Grid x:Name="DPMainX" Visibility="Collapsed">
                     <Image HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="25" Source="DPaste.ico" RenderOptions.BitmapScalingMode="HighQuality" Margin="10,10,0,0"/>
                     <Label Content="DPaste" HorizontalAlignment="Left" Margin="41,10,0,0" VerticalAlignment="Top" Height="25" FontFamily="Assets/#Comfortaa" Foreground="#DDFFFFFF" FontSize="13"/>
                     <Button x:Name="ExitB" Content="&#xE8BB;" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="White" Foreground="White" FontFamily="Segoe MDL2 Assets" FontSize="10" Height="33" Padding="0" BorderThickness="0,0,0,0" HorizontalAlignment="Right" Width="32" Margin="0,2,2,0" Click="ExitB_Click"/>

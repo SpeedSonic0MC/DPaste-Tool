@@ -5,42 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DPaste"
         mc:Ignorable="d"
-        Title="DPaste" Height="498" Width="770" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" Background="{x:Null}" x:Name="DPMain">
-    <Grid x:Name="DPaste" Loaded="DPaste_Loaded">
+        Title="DPaste"
+        Height="498" Width="770" ResizeMode="NoResize" 
+        WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" 
+        Background="{x:Null}" x:Name="DPMain">
+    <Grid x:Name="DPaste">
         <Border Margin="25" Background="#181A21" CornerRadius="12" MouseLeftButtonDown="Border_MouseLeftButtonDown">
             <Border.Effect>
                 <DropShadowEffect BlurRadius="25"/>
             </Border.Effect>
             <Grid ClipToBounds="True">
-                <Grid x:Name="MainIcon">
-                    <Label Content="{}{d}" FontFamily="Arial" FontSize="150" Foreground="White" HorizontalAlignment="Center" Margin="0,50,0,200" Opacity="0">
-                        <Label.Triggers>
-                            <EventTrigger RoutedEvent="Loaded">
-                                <BeginStoryboard>
-                                    <Storyboard>
-                                        <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0.0" To="1.0" Duration="0:0:0.3"/>
-                                    </Storyboard>
-                                </BeginStoryboard>
-                            </EventTrigger>
-                        </Label.Triggers>
-                    </Label>
-                    <Label Content="DPaste" FontFamily="Assets/#Comfortaa" FontSize="50" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,75" Opacity="0">
-                        <Label.Triggers>
-                            <EventTrigger RoutedEvent="Loaded">
-                                <BeginStoryboard>
-                                    <Storyboard>
-                                        <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0.0" To="1.0" Duration="0:0:0.2" BeginTime="0:0:0.3"/>
-                                    </Storyboard>
-                                </BeginStoryboard>
-                            </EventTrigger>
-                        </Label.Triggers>
-                    </Label>
-                </Grid>
-                <Grid x:Name="DPMainX" Visibility="Collapsed">
+                <Grid x:Name="DPMainX">
                     <Image HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="25" Source="DPaste.ico" RenderOptions.BitmapScalingMode="HighQuality" Margin="10,10,0,0"/>
                     <Label Content="DPaste" HorizontalAlignment="Left" Margin="41,10,0,0" VerticalAlignment="Top" Height="25" FontFamily="Assets/#Comfortaa" Foreground="#DDFFFFFF" FontSize="13"/>
                     <Button x:Name="ExitB" Content="&#xE8BB;" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="White" Foreground="White" FontFamily="Segoe MDL2 Assets" FontSize="10" Height="33" Padding="0" BorderThickness="0,0,0,0" HorizontalAlignment="Right" Width="32" Margin="0,2,2,0" Click="ExitB_Click"/>
                     <Button x:Name="MinimizeB" Content="&#xEF2D;" Margin="0,2,34,0" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="White" Foreground="White" FontFamily="Segoe MDL2 Assets" FontSize="10" Height="33" Padding="0" BorderThickness="0,0,0,0" HorizontalAlignment="Right" Width="32" Click="MinimizeB_Click"/>
+                    <Button x:Name="SettingsB" Content="&#xF8B0;" Margin="0,34,0,0" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="White" Foreground="White" FontFamily="Segoe MDL2 Assets" FontSize="10" Height="33" Padding="0" BorderThickness="0,0,0,0" HorizontalAlignment="Right" Width="32" Click="SettingsB_Click"/>
                     <Grid Margin="0,40,0,0">
                         <Label Content="Create a new item" Foreground="White" FontFamily="Arial" FontSize="19" Margin="10,0,0,0" VerticalAlignment="Top"/>
                         <Border BorderBrush="Transparent" CornerRadius="4" Margin="15,32.5,25,50" Background="#555">
